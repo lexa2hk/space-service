@@ -5,16 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>GANGRATUA</title>
   </head>
   <body>
     <header>
-      <nav>
-        <img src="/images/logo.png" alt="LOGO" width="80px" height="80px" />
-        <ul>
-          <li><a href="#top">Главная</a></li>
-          <li><a href="#point">О нас</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+      <nav class="nav">
+        <img src="/images/logo.png" alt="LOGO" width="80px" height="80px" class="logo"/>
+        <ul class="nav">
+          <li><a href="#top" class="navbtn">Главная</a></li>
+          <li><a href="#point" class="navbtn">О нас</a></li>
+          <li><a href="#contacts" class="navbtn">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -22,29 +23,35 @@
     <main>
       <article>
         <section class="commonInfo">
-          <h1 id="top">Gangratua Space</h1>
-          <h2>Рассказываем о бескрайней пустоте с 2022</h2>
-          <h3>
-            <i> <abbr>GGTA</abbr> - твой проводник в этой сфере </i>
-          </h3>
+          <div class="commonInfoText">
+            <h1 id="top" class="header1">Gangratua Space</h1>
+            <h2>Рассказываем о бескрайней пустоте с 2022</h2>
+            <h3>
+              <i> <abbr>GGTA</abbr> - твой проводник в этой сфере </i>
+            </h3>
 
-          <p><a href="#bot" id="botanchor">Вниз страницы</a></p>
+            <blockquote>
+              Абсолютная воля и власть принадлежат космосу — и только ему
+              одному. - К. Циолковский
+            </blockquote>
 
-          <blockquote>
-            Абсолютная воля и власть принадлежат космосу — и только ему одному.
-            - К. Циолковский
-          </blockquote>
-
-          <b id="point">Какова цель?</b>
-          <p>
-            Очень давно мы увлечены <u>исследованием</u> неисследованного<br />
-            Не зря Юрий Алексеевич Гагарин сказал: <q>Все началось с космоса</q>
-          </p>
-          <pre>Наша редакция считает, что<strong> пустота </strong>и является основой, базой всего, что пустотой не является.</pre>
+            <b id="point">Какова цель?</b>
+            <p>
+              Очень давно мы увлечены
+              <u>исследованием</u> неисследованного<br />
+              Не зря Юрий Алексеевич Гагарин сказал:
+              <q>Все началось с космоса</q>
+            </p>
+            <pre>Наша редакция считает, что<strong> пустота </strong>и является основой, <br> базой всего, что пустотой не является.</pre>
+            <p><a href="#bot" id="botanchor">Вниз страницы</a></p>
+          </div>
         </section>
 
         <section class="stats">
-          <h3>Статистика</h3>
+          <div class="header3">
+            <h3>Статистика</h3>
+          </div>
+
           <ol type="I">
             <li>3 Человека занимаются написанием материала</li>
             <li>10 статей мы выпускаем в сезон</li>
@@ -57,7 +64,7 @@
             </li>
           </ol>
 
-          <p><br /><br /><b>О чем пишем?</b></p>
+          <p class="what-about"><b>О чем пишем?</b></p>
 
           <dl>
             <dt>Земля</dt>
@@ -72,21 +79,23 @@
             <dd>Экспедиционные миссии на Луну, Марс, за пределы системы</dd>
           </dl>
 
-          <h3>
-            <a href="https://eyes.nasa.gov/apps/solar-system/#/earth">
-              Мы на карте</a
-            >
-          </h3>
+          <div class="map">
+            <h3>
+              <a href="https://eyes.nasa.gov/apps/solar-system/#/earth">
+                Мы на карте</a
+              >
+            </h3>
 
-          <p>Gangratua в космосе:</p>
-          <p>
-            <a href="https://ru.wikipedia.org/wiki/Чёрная_дыра"
-              ><img src="/images/gangratua.jpg" alt="VCHM" width="400"
-            /></a>
-          </p>
+            <p>Gangratua в космосе:</p>
+            <p>
+              <a href="https://ru.wikipedia.org/wiki/Чёрная_дыра"
+                ><img src="/images/gangratua.jpg" alt="VCHM" width="400"
+              /></a>
+            </p>
+          </div>
         </section>
 
-        <secction id="contacts">
+        <section class="contacts">
           <h2 id="bot">
             <em>Если вас иетересуют детали, свяжитесь с нами<sub>!</sub></em>
           </h2>
@@ -97,12 +106,18 @@
               >Спросите нас по электронной почте</a
             >
           </p>
-        </secction>
+        </section>
       </article>
-
-      <article>
-        <p><a href="#top">Вверх</a></p>
-        <p>
+      <aside>
+        <h2>Подписка</h2>
+        <p>Подпишитесь на нашу рассылку</p>
+        <form action="" method="post">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <input type="submit" value="Подписаться" />
+        </form>
+      </aside>
+      <article class="article-test">
           <img
             src="/images/nasa.jpg"
             usemap="#image_map"
@@ -132,25 +147,17 @@
               shape="polygon"
             />
           </map>
-        </p>
+        <p><a href="#top">Вверх</a></p>
       </article>
 
-      <aside>
-        <h2>Подписка</h2>
-        <p>Подпишитесь на нашу рассылку</p>
-        <form action="" method="post">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <input type="submit" value="Подписаться" />
-        </form>
-      </aside>
+      
 
       <footer>
         <address>
           Вы можете связаться с автором по адресу
           <a href="http://www.google.com">google.com</a>.<br />
           Если вы нашли баг, сообщите нам по
-          <a href="mailto:vchm@gmail.com?subject=Вопрос к редакции">адресу</a
+          <a href="mailto:vchm@gmail.com?subject=Вопрос к редакции" class="email">адресу</a
           >.<br />
         </address>
       </footer>
