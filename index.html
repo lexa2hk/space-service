@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>GANGRATUA</title>
   </head>
   <body>
     <header>
       <nav class="nav">
-        <img src="/images/logo.png" alt="LOGO" width="80px" height="80px" class="logo"/>
+        <img
+          src="/images/logo.png"
+          alt="LOGO"
+          width="80px"
+          height="80px"
+          class="logo"
+        />
         <ul class="nav">
           <li><a href="#top" class="navbtn">Главная</a></li>
           <li><a href="#point" class="navbtn">О нас</a></li>
@@ -99,7 +111,7 @@
           <h2 id="bot">
             <em>Если вас иетересуют детали, свяжитесь с нами<sub>!</sub></em>
           </h2>
-          <p>Телефон:</p>
+          <p id="contacts">Телефон:</p>
           <a href="tel:+7 (495) 123-45-67">+7 (495) 123-45-67</a>
           <p>
             <a href="mailto:vchm@gmail.com?subject=Вопрос к редакции"
@@ -118,49 +130,48 @@
         </form>
       </aside>
       <article class="article-test">
-          <img
-            src="/images/nasa.jpg"
-            usemap="#image_map"
-            width="500"
-            height="350"
+        <img
+          src="/images/nasa.jpg"
+          usemap="#image_map"
+          width="500"
+          height="350"
+        />
+        <map name="image_map">
+          <area
+            alt="Nasa office"
+            title="Nasa office"
+            href="https://www.nasa.gov/centers/hq/home/index.html"
+            coords="540,72,1540,765"
+            shape="rect"
           />
-          <map name="image_map">
-            <area
-              alt="Nasa office"
-              title="Nasa office"
-              href="https://www.nasa.gov/centers/hq/home/index.html"
-              coords="540,72,1540,765"
-              shape="rect"
-            />
-            <area
-              alt="space shuttle"
-              title="space shuttle"
-              href="https://www.nasa.gov/mission_pages/shuttle/main/index.html"
-              coords="1326,920,188"
-              shape="circle"
-            />
-            <area
-              alt="launch site"
-              title="launch site"
-              href="https://www.nasa.gov/launchschedule/"
-              coords="22,7 536,25 533,732 18,652 "
-              shape="polygon"
-            />
-          </map>
+          <area
+            alt="space shuttle"
+            title="space shuttle"
+            href="https://www.nasa.gov/mission_pages/shuttle/main/index.html"
+            coords="1326,920,188"
+            shape="circle"
+          />
+          <area
+            alt="launch site"
+            title="launch site"
+            href="https://www.nasa.gov/launchschedule/"
+            coords="22,7 536,25 533,732 18,652 "
+            shape="polygon"
+          />
+        </map>
         <p><a href="#top">Вверх</a></p>
       </article>
-
-      
-
-      <footer>
-        <address>
-          Вы можете связаться с автором по адресу
-          <a href="http://www.google.com">google.com</a>.<br />
-          Если вы нашли баг, сообщите нам по
-          <a href="mailto:vchm@gmail.com?subject=Вопрос к редакции" class="email">адресу</a
-          >.<br />
-        </address>
-      </footer>
     </main>
+
+    <footer id="developer-footer">
+      <address>
+        Вы можете связаться с автором по адресу
+        <a href="http://www.google.com">google.com</a>.<br />
+        Если вы нашли баг, сообщите нам по
+        <a href="mailto:vchm@gmail.com?subject=Вопрос к редакции" class="email"
+          >адресу</a
+        >.<br />
+      </address>
+    </footer>
   </body>
 </html>

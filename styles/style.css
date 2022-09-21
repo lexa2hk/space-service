@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+}
+
 .logo {
   transition: all 0.2s ease-in-out;
 }
@@ -71,7 +75,7 @@ ul.nav a:visited{
 .header1 {
   font-size: 3em;
   text-align: center;
-  font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+  /* font-family: "Futura", "Trebuchet MS", Arial, sans-serif; */
   font: bold;
   padding-bottom: 20px;
 }
@@ -90,6 +94,7 @@ main {
     #203a43,
     #0f2027
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-bottom: 20px;
 }
 
 /* #botanchor {
@@ -234,6 +239,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  padding-bottom: 20px;
 }
 
 .map img {
@@ -251,7 +257,7 @@ aside {
   background-color: lightgray;
 }
 
-footer {
+#developer-footer{
     padding-top: 20px;
     padding-bottom: 20px;
     background: #bdc3c7; /* fallback for old browsers */
