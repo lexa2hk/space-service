@@ -9,6 +9,7 @@ h1, h2, h3 {
 
 .logo {
   transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
 .logo:hover {
@@ -16,7 +17,7 @@ h1, h2, h3 {
 }
 
 .navbtn:visited {
-    backgroind-color: #000000;
+    background-color: #000000;
 }
 
 .nav {
@@ -33,6 +34,7 @@ h1, h2, h3 {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding-bottom: 20px;
+  position: static;
 }
 ul.nav {
   margin-left: 0px;
@@ -40,14 +42,20 @@ ul.nav {
   list-style: none;
   text-align: center;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 .nav img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .nav li {
-  display: inline;
+  display: inline; /* display inline so that the list items appear on the same line */
+  padding: 0 20px;
 }
 ul.nav a {
   border-radius: 10px;
@@ -73,6 +81,7 @@ ul.nav a:visited{
 }
 
 .header1 {
+  
   font-size: 3em;
   text-align: center;
   /* font-family: "Futura", "Trebuchet MS", Arial, sans-serif; */
@@ -81,6 +90,7 @@ ul.nav a:visited{
 }
 
 main {
+  display: block;
   background: #0f2027; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -97,9 +107,7 @@ main {
   padding-bottom: 20px;
 }
 
-/* #botanchor {
-    padding-bottom: 20px;
-} */
+ 
 
 .commonInfo {
   padding-top: 20px;
@@ -200,6 +208,7 @@ main {
 }
 
 .contacts {
+  display: block;
   padding-top: 20px;
   border-radius: 15px;
   background-color: rgb(209, 209, 209);
@@ -244,6 +253,7 @@ main {
 
 .map img {
   border-radius: 15px;
+  
 }
 aside {
     padding: 10px 10px 10px 10px;
@@ -252,7 +262,7 @@ aside {
   width: 30%;
   padding-left: 15px;
   margin-left: 15px;
-  float: right;
+  float: right; /* float the aside to the right */
   font-style: italic;
   background-color: lightgray;
 }
@@ -276,4 +286,44 @@ aside {
 
 .email:visited{
     color: #000000;
+}
+
+/* 3============================ */
+#go-up {
+  position: sticky;
+  top:90%;
+  right: 0;
+  z-index: 100;
+  left: 95%;
+  
+}
+#botanchor {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+}
+
+#btn-form{
+  position: absolute;
+  margin-left: 5px;
+}
+
+#developer-footer p {
+  position: fixed;
+}
+
+.info-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-img img {
+  border-radius: 20px;
+  border: 3px solid black;
+  width: 300px;
+  float: left;
+  margin-right: 20px;
 }
