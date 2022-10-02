@@ -126,14 +126,8 @@
           </p>
         </section>
       </article>
-      <aside>
-        <h2>Подписка</h2>
-        <p>Подпишитесь на нашу рассылку</p>
-        <form action="" method="post">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <input type="submit" value="Подписаться" id="btn-form" />
-        </form>
+      <aside class="">
+        ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА
       </aside>
       <article class="article-test">
         <img
@@ -167,7 +161,70 @@
         </map>
         <p><a href="#top">Вверх</a></p>
       </article>
+
+      <div class="frame-part">
+        <iframe src="https://eyes.nasa.gov/apps/solar-system/#/home" frameborder="0" width="100%" height="100%" ></iframe>
+      </div>
+
+      <div class="video-part">
+        <video src="/video/voyagers.mp4" controls width="100%" height="100%" poster="images/poster.png"></video>
+      </div>
+      
+
+      <div id="join-us-form">
+        <h2>Подписка</h2>
+          <p>Вступите в наш клуб</p>
+          <form action="" method="post">
+            <label for="text">Ваше имя</label>
+            <input type="text" name="name" id="text" placeholder="Имя" required pattern="/^[a-z ,.'-]+$/i"><br>
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" placeholder="Телефон" required><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required><br>
+  
+            <label for="file">Аватар профиля</label>
+            <input type="file" name="file" id="file" accept="image/*" ><br>
+  
+            <label for="datetile-local">Дата рождения</label>
+            <input type="date" name="datetile-local" id="datetile-local" min="2010-01-01" max="1930-01-01"><br>
+  
+            <label for="radio">Род деятельности</label><br>
+            <input type="radio" name="radio" id="radio" value="1" checked>Обучающийся<br>
+            <input type="radio" name="radio" id="radio" value="2">Писатель<br>
+            <input type="radio" name="radio" id="radio" value="3">Астроном<br>
+  
+  
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password" placeholder="Пароль" required><br>
+  
+            <p>О себе</p>
+            <textarea  id="text-area" cols="30" rows="5" minlength="1" maxlength="1000" placeholder="Я  - инженер-строитель из Египта" required></textarea>
+  
+            <fieldset>
+              <legend>Сколько планет в солнечной системе?</legend>
+              <select name="select-pl" id="select-pl" required size="4">
+                <option value="1">8</option>
+                <option value="2">9</option>
+                <option value="3">10</option>
+                <option value="4">11</option>
+              </select>
+              <!-- <input type="radio" name="radiob" id="radiob" value="1" checked>8<br>
+              <input type="radio" name="radiob" id="radiob" value="1" checked>9<br>
+              <input type="radio" name="radiob" id="radiob" value="1" checked>10<br> -->
+            </fieldset>
+  
+            <label for="checkbox">Согласие о обработке данных</label>
+            <input type="checkbox" name="checkbox" id="checkbox" value="checked" required><br>
+            
+            <input type="submit" value="Подписаться" id="btn-form" />
+  
+            <p>Уже зарегестрированы?</p>
+            <button>Войти</button>
+          </form>
+      </div>
     </main>
+
+    
 
     <footer id="developer-footer">
       <address>
