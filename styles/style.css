@@ -397,7 +397,7 @@ textarea::placeholder{
   font-size: 20px;
 }
 
-.frame-part, .video-part{
+.frame-part{
   margin-bottom: 50px;
 }
 
