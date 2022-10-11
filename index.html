@@ -15,34 +15,32 @@
     <title>GANGRATUA</title>
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <img
-          src="/images/logo.png"
-          alt="LOGO"
-          width="80px"
-          height="80px"
-          class="logo"
-        />
-        <ul class="nav">
-          <li><a href="#top" class="navbtn">Главная</a></li>
-          <li><a href="#point" class="navbtn">О нас</a></li>
-          <li><a href="#contacts" class="navbtn">Контакты</a></li>
-        </ul>
-        
-      </nav>
-    </header>
-
+    <section class="top-nav">
+      <div>
+        <img src="/images/logo.png" alt="LOGO" width="80px" height="80px" />
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="#top" class="navbtn">Главная</a></li>
+        <li><a href="#point" class="navbtn">О нас</a></li>
+        <li><a href="#contacts" class="navbtn">Контакты</a></li>
+      </ul>
+    </section>
 
     <main>
-      <article>
+      <article class="">
         <a href="#top" id="go-up">GO UP</a>
         <section class="commonInfo">
           <div class="commonInfoText">
             <span> <h1 id="top" class="header1">Gangratua Space</h1></span>
-            
-            <div class="info-img"><img src="images/spaceship.png" alt="IMAGE"></div>
-           
+
+            <div class="info-img">
+              <img src="images/spaceship.png" alt="IMAGE" />
+            </div>
+
             <h2>Рассказываем о бескрайней пустоте с 2022</h2>
             <h3>
               <i> <abbr>GGTA</abbr> - твой проводник в этой сфере </i>
@@ -126,102 +124,171 @@
           </p>
         </section>
       </article>
-      <aside class="">
-        ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА
-      </aside>
-      <article class="article-test">
-        <img
-          src="/images/nasa.jpg"
-          usemap="#image_map"
-          width="500"
-          height="350"
-        />
-        <map name="image_map">
-          <area
-            alt="Nasa office"
-            title="Nasa office"
-            href="https://www.nasa.gov/centers/hq/home/index.html"
-            coords="540,72,1540,765"
-            shape="rect"
-          />
-          <area
-            alt="space shuttle"
-            title="space shuttle"
-            href="https://www.nasa.gov/mission_pages/shuttle/main/index.html"
-            coords="1326,920,188"
-            shape="circle"
-          />
-          <area
-            alt="launch site"
-            title="launch site"
-            href="https://www.nasa.gov/launchschedule/"
-            coords="22,7 536,25 533,732 18,652 "
-            shape="polygon"
-          />
-        </map>
-        <p><a href="#top">Вверх</a></p>
-      </article>
 
-      <div class="frame-part">
-        <iframe src="./videopage.html" frameborder="0" height="768px" width="1366px"></iframe>
+      <div class="map-banner">
+        <!-- <aside class="">ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА</aside> -->
+        <div class="box-container"><p>ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА</p></div>
+        <article class="article-test">
+          <img
+            src="/images/nasa.jpg"
+            usemap="#image_map"
+            width="500"
+            height="350"
+          />
+          <map name="image_map">
+            <area
+              alt="Nasa office"
+              title="Nasa office"
+              href="https://www.nasa.gov/centers/hq/home/index.html"
+              coords="540,72,1540,765"
+              shape="rect"
+            />
+            <area
+              alt="space shuttle"
+              title="space shuttle"
+              href="https://www.nasa.gov/mission_pages/shuttle/main/index.html"
+              coords="1326,920,188"
+              shape="circle"
+            />
+            <area
+              alt="launch site"
+              title="launch site"
+              href="https://www.nasa.gov/launchschedule/"
+              coords="22,7 536,25 533,732 18,652 "
+              shape="polygon"
+            />
+          </map>
+          <p><a href="#top">Вверх</a></p>
+        </article>
+      </div>
+
+      <div class="frame-part flex">
+        <iframe
+          src="./videopage.html"
+          frameborder="0"
+          
+        ></iframe>
         <!-- <iframe src="https://eyes.nasa.gov/apps/solar-system/#/home" frameborder="0" width="100%" height="100%" ></iframe> -->
       </div>
 
-      
-
       <div id="join-us-form">
         <h2>Подписка</h2>
-          <p>Вступите в наш клуб</p>
-          <form action="" method="post">
-            <label for="text">Ваше имя</label>
-            <input type="text" name="name" id="text" placeholder="Имя" required pattern="/^[a-z ,.'-]+$/i"><br>
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" placeholder="Телефон" required><br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email" required><br>
-  
-            <label for="file">Аватар профиля</label>
-            <input type="file" name="file" id="file" accept="image/*" ><br>
-  
-            <label for="datetile-local">Дата рождения</label>
-            <input type="date" name="datetile-local" id="datetile-local" min="2010-01-01" max="1930-01-01"><br>
-  
-            <label for="radio">Род деятельности</label><br>
-            <input type="radio" name="radio" id="radio" value="1" checked>Обучающийся<br>
-            <input type="radio" name="radio" id="radio" value="2">Писатель<br>
-            <input type="radio" name="radio" id="radio" value="3">Астроном<br>
-  
-  
-            <label for="password">Пароль</label>
-            <input type="password" name="password" id="password" placeholder="Пароль" required><br>
-  
-            <p>О себе</p>
-            <textarea  id="text-area" cols="30" rows="5" minlength="1" maxlength="1000" placeholder="Я  - инженер-строитель из Египта" required></textarea>
-  
-            <fieldset>
-              <legend>Сколько планет в солнечной системе?</legend>
-              <select name="select-pl" id="select-pl" required size="4">
-                <option value="1">8</option>
-                <option value="2">9</option>
-                <option value="3">10</option>
-                <option value="4">11</option>
-              </select>
-              <!-- <input type="radio" name="radiob" id="radiob" value="1" checked>8<br>
+        <p>Вступите в наш клуб</p>
+        <form action="" method="post">
+          <label for="text">Ваше имя</label>
+          <input
+            type="text"
+            name="name"
+            id="text"
+            placeholder="Имя"
+            required
+            pattern="/^[a-z ,.'-]+$/i"
+          /><br />
+          <label for="tel">Телефон</label>
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="Телефон"
+            required
+          /><br />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          /><br />
+
+          <label for="file">Аватар профиля</label>
+          <input type="file" name="file" id="file" accept="image/*" /><br />
+
+          <label for="datetile-local">Дата рождения</label>
+          <input
+            type="date"
+            name="datetile-local"
+            id="datetile-local"
+            min="2010-01-01"
+            max="1930-01-01"
+          /><br />
+
+          <label for="radio">Род деятельности</label><br />
+          <input
+            type="radio"
+            name="radio"
+            id="radio"
+            value="1"
+            checked
+          />Обучающийся<br />
+          <input type="radio" name="radio" id="radio" value="2" />Писатель<br />
+          <input type="radio" name="radio" id="radio" value="3" />Астроном<br />
+
+          <label for="password">Пароль</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Пароль"
+            required
+          /><br />
+
+          <p>О себе</p>
+          <textarea
+            id="text-area"
+            cols="30"
+            rows="5"
+            minlength="1"
+            maxlength="1000"
+            placeholder="Я  - инженер-строитель из Египта"
+            required
+          ></textarea>
+
+          <fieldset>
+            <legend>Сколько планет в солнечной системе?</legend>
+            <select name="select-pl" id="select-pl" required size="4">
+              <option value="1">8</option>
+              <option value="2">9</option>
+              <option value="3">10</option>
+              <option value="4">11</option>
+            </select>
+            <!-- <input type="radio" name="radiob" id="radiob" value="1" checked>8<br>
               <input type="radio" name="radiob" id="radiob" value="1" checked>9<br>
               <input type="radio" name="radiob" id="radiob" value="1" checked>10<br> -->
-            </fieldset>
-  
-            <label for="checkbox">Согласие о обработке данных</label>
-            <input type="checkbox" name="checkbox" id="checkbox" value="checked" required><br>
-            
-            <input type="submit" value="Подписаться" id="btn-form" />
-  
-            <p>Уже зарегестрированы?</p>
-            <button>Войти</button>
-          </form>
-      </div>
-    </main>
+          </fieldset>
 
+          <label for="checkbox">Согласие о обработке данных</label>
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            value="checked"
+            required
+          /><br />
+
+          <input type="submit" value="Подписаться" id="btn-form" />
+
+          <p>Уже зарегестрированы?</p>
+          <button>Войти</button>
+        </form>
+      </div>
+    
+
+
+
+    <section>
+      <h2 class="gal-header">Последние фотографии Хаббл</h2>  
+      <div class="wrapper">
+        
+        <img class="img-gal" src="https://source.unsplash.com/random/600x600?water" alt="">
+        <img class="img-gal" src="https://source.unsplash.com/random/600x600?summer" alt="">
+        <img class="img-gal" src="https://source.unsplash.com/random/600x600?plants" alt="">
+        <img class="img-gal" src="https://source.unsplash.com/random/600x600?snow" alt="">
+        <img class="img-gal" src="https://source.unsplash.com/random/600x600?roses" alt="">
+        
+      </div>
+    </section>
+  </main>
     
 
     <footer id="developer-footer">

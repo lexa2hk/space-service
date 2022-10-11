@@ -3,8 +3,10 @@
   padding: 0;
 }
 
-h1, h2, h3 {
-  font-family: 'Comfortaa', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Comfortaa", cursive;
 }
 
 .logo {
@@ -17,7 +19,10 @@ h1, h2, h3 {
 }
 
 .navbtn:visited {
-    background-color: #000000;
+  /* background-color: #000000; */
+}
+.navbtn {
+  opacity: 100%;
 }
 
 .nav {
@@ -73,15 +78,14 @@ ul.nav a:hover {
   color: #f4f4f4;
 }
 
-ul.nav a:active{
-    box-shadow: 2px 2px 5px #4c4c4c;
+ul.nav a:active {
+  box-shadow: 2px 2px 5px #4c4c4c;
 }
-ul.nav a:visited{
-    scale: 1.1;
+ul.nav a:visited {
+  scale: 1.1;
 }
 
 .header1 {
-  
   font-size: 3em;
   text-align: center;
   /* font-family: "Futura", "Trebuchet MS", Arial, sans-serif; */
@@ -106,8 +110,6 @@ main {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding-bottom: 20px;
 }
-
- 
 
 .commonInfo {
   padding-top: 20px;
@@ -225,7 +227,7 @@ main {
 }
 
 .article-test {
-  width: 60%;
+  display: flex;
   padding-top: 20px;
   border-radius: 15px;
   background-color: rgb(209, 209, 209);
@@ -240,72 +242,68 @@ main {
   padding-left: 20px;
   padding-bottom: 20px;
   text-align: center;
+  align-items: center;
 }
 
 .article-test img {
   border-radius: 15px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   padding-bottom: 20px;
+  align-items: center;
 }
 
 .map img {
   border-radius: 15px;
   
 }
-aside {
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    margin-right: 10px;
-  width: 30%;
-  padding-left: 15px;
-  margin-left: 15px;
-  float: right; /* float the aside to the right */
-  font-style: italic;
-  background-color: lightgray;
+
+.map-banner {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#developer-footer{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #2c3e50,
-    #bdc3c7
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #2c3e50,
-    #bdc3c7
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.box-container > p {
+
+  visibility: hidden;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+  margin-left: 15px;
+  /* float: right; float the aside to the right */
+  font-style: italic;
+  background-color: lightgray;
+  
+}
+
+#developer-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #394045; /* fallback for old browsers */
   font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
 }
 
-.email:visited{
-    color: #000000;
+.email:visited {
+  color: #000000;
 }
 
 /* 3============================ */
 #go-up {
   position: sticky;
-  top:90%;
+  top: 90%;
   right: 0;
   z-index: 100;
   left: 95%;
-  
 }
 #botanchor {
   position: relative;
   bottom: 0;
   left: 0;
   right: 0;
- 
 }
 
-#btn-form{
+#btn-form {
   /* position: absolute; */
   margin-left: 5px;
 }
@@ -328,10 +326,9 @@ aside {
   margin-right: 20px;
 }
 
-.aside-form{
+.aside-form {
   display: block;
 }
-
 
 textarea {
   width: 100%;
@@ -343,7 +340,7 @@ textarea {
   background-color: #f8f8f8;
   resize: none;
 }
-select  {
+select {
   width: 100%;
   padding: 4px 5px;
   border: none;
@@ -359,18 +356,17 @@ input {
   border-radius: 4px;
   background-color: #f8f8f8;
 }
-input[type=radio]{
+input[type="radio"] {
   width: auto;
 }
-input[type=checkbox]{
+input[type="checkbox"] {
   width: auto;
 }
-form{
+form {
   padding: 20px;
 }
 
-
-#join-us-form{
+#join-us-form {
   border-radius: 20px;
   width: 80%;
   align-items: center;
@@ -379,7 +375,8 @@ form{
   background-color: rgb(209, 209, 209);
 }
 
-#join-us-form h2, p{
+#join-us-form h2,
+p {
   text-align: center;
   padding-top: 10px;
 }
@@ -392,12 +389,242 @@ select:focus {
   background-color: lightblue;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   font-style: italic;
   font-size: 20px;
+
 }
 
 .frame-part{
-  margin-bottom: 50px;
+  height: 90vh;
 }
 
+@media screen and (max-width: 900px) {
+  .frame-part{
+    height: auto;
+  }
+}
+
+.frame-part iframe {
+  margin-bottom: 50px;
+  width: 90%;
+  
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding-bottom: 20px;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu > li > a {
+  border-radius: 10px;
+  display: inline-block;
+  width: 5em;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px dashed #333;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.43, 0.79, 0.47, 0.77);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container > .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container > .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container > .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    opacity: 90%;
+    position: absolute;
+    top: 0;
+    margin-top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 200ms cubic-bezier(0.43, 0.79, 0.47, 0.77);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 200ms cubic-bezier(0.43, 0.79, 0.47, 0.77);
+  }
+  .menu > li {
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: rgb(59, 59, 59);
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid rgb(98, 98, 98);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  /* background: #bdc3c7; 
+  background: -webkit-linear-gradient(
+    to bottom,
+    #2c3e50,
+    #bdc3c7
+  );
+  background: linear-gradient(
+    to bottom,
+    #2c3e50,
+    #bdc3c7
+  ); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.img-gal {
+  flex-grow: 1;
+  flex-basis: 200px;
+  max-width: 300px;
+  margin: 2% 2% 40px 2%;
+  
+  margin: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .img-gal{
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  
+  
+}
+
+@media screen and (max-width: 700px) {
+  .img-gal {
+    max-width: 500px;
+  }
+}
+
+.img-gal:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.img-gal:not(:hover){
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+
+.gal-header{
+  text-align: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.video-part{
+  display: flex;
+}
+.video-part video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
