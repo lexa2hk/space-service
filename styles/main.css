@@ -1,0 +1,264 @@
+#main-header {
+  text-align: center;
+  color: aliceblue;
+  padding: 10px 0;
+}
+
+.glass-wrapper {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.glass-element {
+  z-index: 0;
+  position: relative;
+  max-width: 600px;
+  width: calc(33.3333333333% - 20px);
+  min-width: 300px;
+  height: 700px;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+.glass-bg {
+  position: relative;
+  -webkit-clip-path: polygon(45% 0, 100% 0%, 75% 100%, 17% 100%);
+          clip-path: polygon(45% 0, 100% 0%, 75% 100%, 17% 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00dbde;
+  background-image: linear-gradient(36deg, #00dbde 0%, #fc00ff 100%);
+  z-index: -1;
+}
+
+.card {
+  position: absolute;
+  max-width: 600px;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.card::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: 0;
+  width: 100px;
+  height: 80px;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  z-index: -1;
+}
+
+.card::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -180px;
+  right: 0;
+  width: 100px;
+  height: 80px;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  z-index: -1;
+}
+
+.glass-element:hover .glass-bg {
+  -webkit-animation: slideParallelogram 0.3s ease-in-out;
+          animation: slideParallelogram 0.3s ease-in-out;
+  -webkit-clip-path: polygon(28% 0, 68% 0, 69% 100%, 28% 100%);
+          clip-path: polygon(28% 0, 68% 0, 69% 100%, 28% 100%);
+}
+
+.glass-element:hover .card::before {
+  display: block;
+  transform: translate(100px, 100px);
+  -webkit-animation: moveRectangle 0.3s;
+          animation: moveRectangle 0.3s;
+}
+
+.glass-element:hover .card::after {
+  display: block;
+  transform: translate(-100px, -100px);
+  -webkit-animation: moveRectangleAfter 0.3s;
+          animation: moveRectangleAfter 0.3s;
+}
+
+.glass-text {
+  padding: 10px;
+  font-size: calc(0.3vw + 1vh + 1vmin);
+  overflow: visible;
+  z-index: 1;
+}
+
+@-webkit-keyframes slideParallelogram {
+  0% {
+    -webkit-clip-path: polygon(45% 0, 100% 0%, 75% 100%, 17% 100%);
+            clip-path: polygon(45% 0, 100% 0%, 75% 100%, 17% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(28% 0, 68% 0, 69% 100%, 28% 100%);
+            clip-path: polygon(28% 0, 68% 0, 69% 100%, 28% 100%);
+  }
+}
+
+@keyframes slideParallelogram {
+  0% {
+    -webkit-clip-path: polygon(45% 0, 100% 0%, 75% 100%, 17% 100%);
+            clip-path: polygon(45% 0, 100% 0%, 75% 100%, 17% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(28% 0, 68% 0, 69% 100%, 28% 100%);
+            clip-path: polygon(28% 0, 68% 0, 69% 100%, 28% 100%);
+  }
+}
+@-webkit-keyframes moveRectangle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes moveRectangle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@-webkit-keyframes moveRectangleAfter {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+@keyframes moveRectangleAfter {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+.social-buttons {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+.social-button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.social-button:focus, .social-button:hover {
+  color: #fff;
+}
+.social-button:focus::after, .social-button:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin-left: calc(-50% - 1px);
+}
+.social-button i,
+.social-button svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social-button i {
+  font-size: 25.6px;
+}
+.social-button svg {
+  height: 40%;
+  width: 40%;
+}
+.social-button--mail {
+  color: #0072c6;
+}
+.social-button--mail::after {
+  background: #0072c6;
+}
+.social-button--facebook {
+  color: #3b5999;
+}
+.social-button--facebook::after {
+  background: #3b5999;
+}
+.social-button--vk {
+  color: #0077b5;
+}
+.social-button--vk::after {
+  background: #0077b5;
+}
+.social-button--github {
+  color: #6e5494;
+}
+.social-button--github::after {
+  background: #6e5494;
+}
+.social-button--snapchat {
+  color: #eec900;
+}
+.social-button--snapchat::after {
+  background: #eec900;
+}
+.social-button--twitter {
+  color: #55acee;
+}
+.social-button--twitter::after {
+  background: #55acee;
+}
+.social-button--instagram {
+  color: #e4405f;
+}
+.social-button--instagram::after {
+  background: #e4405f;
+}/*# sourceMappingURL=main.css.map */

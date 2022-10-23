@@ -1,0 +1,122 @@
+main {
+    height: 100vh;
+}
+
+.login-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    margin: 20px;
+    max-width: 600px;
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.38);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    z-index: 100;
+}
+
+form .input-group button {
+    margin: 10px;
+}
+
+.login-form {
+    display: block;
+}
+
+.login-card-footer {
+    padding: 10px;
+}
+
+$box-array: (
+    "1": calc(random(400) * 1px),
+    "2": calc(random(400) * 1px),
+    "3": calc(random(400) * 1px),
+    "4": calc(random(400) * 1px),
+    "5": calc(random(400) * 1px),
+    "6": calc(random(400) * 1px),
+    "7": calc(random(400) * 1px),
+    "8": calc(random(400) * 1px),
+);
+
+
+.box {
+    z-index: 1;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.38);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    // transform: translate(calc(random(400) * 1px), calc(random(400) * 1px));
+}
+
+
+
+// @each $num, $pixels in $box-array {
+//     .box--#{$num} {
+//         z-index: 1;
+//         position: absolute;
+//         height: 70px;
+//         width: 70px;
+//         backdrop-filter: blur(20px) saturate(200%);
+//         -webkit-backdrop-filter: blur(20px) saturate(200%);
+//         background-color: rgba(255, 255, 255, 0.38);
+//         border-radius: 12px;
+//         border: 1px solid rgba(209, 213, 219, 0.3);
+//         transform: translate($pixels, $pixels);
+//     }
+// }
+
+
+.box--1 {
+    transform: translate(-145px, -100px);
+}
+
+.box--2 {
+    transform: translate(131px, 100px);
+}
+
+.login-container:hover .box--1{
+    animation: move1 infinite;
+    animation-duration: 3s;
+    transition: all 3s ease-in-out;
+}
+
+.login-container:hover .box--2{
+    animation: move2 infinite;
+    animation-duration: 3s;
+    transition: all 3s ease-in-out;
+}
+
+
+@keyframes move1 {
+    0% {
+        transform: rotate(0deg) translate(-145px, -100px);
+    }
+    50% {
+        transform: rotate(30deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(0deg) translate(-145px, -100px);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: rotate(0deg) translate(131px, 100px);
+    }
+    50% {
+        transform: rotate(30deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(0deg) translate(131px, 100px);
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/login.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/23dd47c5b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Главная</title>
+  </head>
+  <body>
+    <section class="top-nav">
+      <div>
+        <img src="/images/logo.png" alt="LOGO" width="80px" height="80px" />
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="main.html" class="custom-btn btn-1">Главная</a></li>
+        <li><a href="index.html" class="custom-btn btn-1">О нас</a></li>
+        <li><a href="#contacts" class="custom-btn btn-1">Контакты</a></li>
+      </ul>
+    </section>
+
+    <main>
+      <div class="login-container">
+        <div class="login-card">
+          <form action="" class="login-form">
+            <h1>Вход</h1>
+            <div class="input-group">
+              <label for="login">Логин</label>
+              <input type="text" id="login" />
+            </div>
+            <div class="input-group">
+              <label for="password">Пароль</label>
+              <input type="password" id="password" />
+            </div>
+            <div class="input-group">
+              <button class="custom-btn btn-1">Войти</button>
+            </div>
+          </form>
+
+          <div class="login-card-footer">
+            <p>
+              Нет аккаунта? <a href="cab-register.html">Зарегистрироваться</a>
+            </p>
+            <p>Забыли пароль? <a href="restore.html">Восстановить</a></p>
+          </div>
+        </div>
+        <div class="box box--1"></div>
+        <div class="box box--2"></div>
+        <div class="box--3"></div>
+        <div class="box--4"></div>
+        <div class="box--5"></div>
+      </div>
+    </main>
+  </body>
+</html>
