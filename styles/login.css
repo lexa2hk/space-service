@@ -1,9 +1,5 @@
-main {
-  height: 100vh;
-}
-
 .login-container {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -113,4 +109,45 @@ form .input-group button {
   100% {
     transform: rotate(0deg) translate(131px, 100px);
   }
+}
+.props-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.prop {
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(241, 241, 241);
+  width: 33.3333333333%;
+  max-width: 400px;
+  min-width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.prop button {
+  text-decoration: none;
+  color: black;
+  bottom: 0;
+  position: relative;
+}
+
+.props-container:hover .prop:not(:hover) {
+  filter: blur(3px);
+  transition: filter 0.1s ease-in-out;
+}
+
+.prop:hover {
+  filter: none;
+  transform: scale(1.1) translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+
+.prop .btn-4 {
+  margin: 10px;
 }/*# sourceMappingURL=login.css.map */
