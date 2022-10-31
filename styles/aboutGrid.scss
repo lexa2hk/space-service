@@ -1,0 +1,130 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-rows: 70px 95% 300px;
+    grid-gap: 10px;
+    // background-color: #2196F3;
+   
+
+    grid-template-areas: 
+    "header header header"
+    "sidebar main ads"
+    "footer footer footer";
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    main{
+        padding-bottom: 100px;
+    }
+    .grid-container {
+        height: 200%;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 70px 95% 1fr;
+        grid-gap: 10px;
+        // background-color: #2196F3;
+        padding: 10px;
+    
+        grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "ads footer";
+    
+    }
+
+    .developer-footer{
+        margin-top: 0px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 838px) {
+
+    .grid-container {
+        height: 200%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px 1fr 0.2fr 0.2fr 0.1fr;
+        grid-gap: 10px;
+        // background-color: #2196F3;
+        padding: 10px;
+    
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "ads"
+        "footer";
+    
+    }
+
+    .grid-header{
+    }
+    
+}
+
+.grid-header {
+    display: flex;
+    grid-area: header;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    & Button{
+        width: 170px;
+        height: 40px;
+        margin: 10px;
+    }
+
+    & Button a {
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+}
+
+.grid-sidebar{
+    grid-area: sidebar;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(209, 209, 209);
+    color: black;
+    & h2{
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        margin: 10px;
+        text-align: center;
+    }
+    & h3{
+        text-align: center;
+    }
+    & p {
+        text-align: justify;
+        font-size: 20px;
+    }
+}
+
+.grid-1 {
+    grid-area: main;
+    
+}
+
+.grid-ads{
+    grid-area: ads;
+    
+
+    & img{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.developer-footer{
+    grid-area: footer
+}

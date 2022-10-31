@@ -150,4 +150,48 @@ form .input-group button {
 
 .prop .btn-4 {
   margin: 10px;
+}
+
+.gal-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 20px;
+  grid-template-areas: "picA picB picC picC" "picA picD picE picF" "picG picG picE picF";
+}
+.gal-container div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.picA {
+  grid-area: picA;
+}
+
+.picB {
+  grid-area: picB;
+}
+
+.picC {
+  grid-area: picC;
+}
+
+.picD {
+  grid-area: picD;
+}
+
+.picE {
+  grid-area: picE;
+}
+
+.picF {
+  grid-area: picF;
+}
+
+.picG {
+  grid-area: picG;
 }/*# sourceMappingURL=login.css.map */

@@ -212,6 +212,7 @@ main {
 .contacts {
   display: block;
   padding-top: 20px;
+  margin-top: 20px;
   border-radius: 15px;
   background-color: rgb(209, 209, 209);
   font-size: 1.5em;
@@ -289,7 +290,8 @@ main {
   background-color: lightgray;
 }
 
-#developer-footer {
+.developer-footer {
+  margin-top: 70px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #394045; /* fallback for old browsers */
@@ -1216,4 +1218,10 @@ textarea::placeholder {
 .email{
   color: #fff;
   text-decoration: none;
+}
+
+
+.article-bruh {
+  margin-top: 10px;
+  position: relative;
 }
