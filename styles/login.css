@@ -157,7 +157,7 @@ form .input-group button {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;
-  margin: 20px;
+  margin: 20px 10%;
   grid-template-areas: "picA picB picC picC" "picA picD picE picF" "picG picG picE picF";
 }
 .gal-container div img {
@@ -170,28 +170,112 @@ form .input-group button {
 
 .picA {
   grid-area: picA;
+  position: relative;
+}
+.picA:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picA:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
 }
 
 .picB {
   grid-area: picB;
 }
+.picB:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picB:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
+}
 
 .picC {
   grid-area: picC;
+}
+.picC:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picC:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
 }
 
 .picD {
   grid-area: picD;
 }
+.picD:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picD:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
+}
 
 .picE {
   grid-area: picE;
+}
+.picE:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picE:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
 }
 
 .picF {
   grid-area: picF;
 }
+.picF:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picF:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
+}
 
 .picG {
   grid-area: picG;
+}
+.picG:hover .gal-label {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.picG:hover {
+  transform: scale(1.1) skewY(1deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.gal-label {
+  opacity: 0;
+  position: absolute;
+  bottom: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  margin: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.gal-label p {
+  padding: 30px 3vw;
 }/*# sourceMappingURL=login.css.map */

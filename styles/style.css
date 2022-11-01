@@ -366,7 +366,8 @@ input {
   width: 100%;
   padding: 4px 5px;
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: 1px solid rgb(0, 0, 0);
+  
   border-radius: 4px;
   background-color: #f8f8f8;
 }
@@ -389,14 +390,20 @@ form {
   background-color: rgb(209, 209, 209);
 }
 
-#join-us-form h2,
-p {
+#join-us-form h2,p {
   text-align: center;
   padding-top: 10px;
 }
 
 input:focus {
   background-color: lightblue;
+  transform: scale(1.05);
+  border: 2px solid rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+input:focus::after{
+
 }
 
 select:focus {
@@ -405,7 +412,7 @@ select:focus {
 
 textarea::placeholder {
   font-style: italic;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .frame-part {

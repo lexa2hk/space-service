@@ -89,4 +89,191 @@
 
 .developer-footer {
   grid-area: footer;
-}/*# sourceMappingURL=aboutGrid.css.map */
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "name phone" "email avatar" "birth whois" "pass about" "quiz quiz" "addition addition";
+}
+
+@media screen and (max-width: 900px) {
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 0.3fr);
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas: "name" "phone" "email" "avatar" "birth" "whois" "pass" "about" "quiz" "addition";
+  }
+}
+.addition {
+  grid-area: addition;
+}
+
+.quiz {
+  grid-area: quiz;
+}
+
+.about {
+  grid-area: about;
+}
+
+.pass {
+  grid-area: pass;
+}
+
+.whois {
+  grid-area: whois;
+}
+
+.birth {
+  grid-area: birth;
+}
+
+.avatar {
+  grid-area: avatar;
+}
+
+.email {
+  grid-area: email;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.name {
+  grid-area: name;
+}
+
+.developer-footer {
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas: "about-us about-us links contact";
+}
+.developer-footer p {
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .developer-footer {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "about-us links" "contact contact";
+  }
+}
+@media screen and (max-width: 768px) {
+  .developer-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "about-us about-us" "links contact";
+  }
+}
+.about-us {
+  grid-area: about-us;
+}
+
+.links {
+  grid-area: links;
+}
+.links ul {
+  list-style-type: none;
+}
+.links li {
+  margin: 10px;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+}
+.links a:hover {
+  color: rgb(224, 230, 255);
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact {
+  grid-area: contact;
+  text-align: left;
+}
+.contact i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.footer-line {
+  margin: 10px 3px;
+  width: 50px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: grey;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.social-btn i {
+  z-index: 2;
+}
+
+.social-btn::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e66465, #9198e5);
+  z-index: -1;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn:hover::before {
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-btn:not(:hover)::before {
+  top: -100%;
+  transition: all 0.3s ease-in-out;
+} /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=aboutGrid.css.map */
