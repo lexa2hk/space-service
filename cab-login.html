@@ -38,6 +38,19 @@
     </section>
 
     <main>
+      <div id="ask-container">
+        <div class="ask">
+          <form action="">
+            <label for="ask-input">Желаете зарегистрироваться?</label>
+            <input type="text" id="ask-input" />
+          </form>
+
+          <button class="custom-btn btn-1" onclick="checkADForm()">
+            Отправить
+          </button>
+        </div>
+      </div>
+
       <div class="login-container">
         <div class="login-card">
           <form action="" class="login-form">
@@ -71,61 +84,118 @@
 
       <div class="props-container">
         <div class="prop">
-            <h1>01 Полный доступ</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem quidem totam expedita laudantium libero amet earum magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci doloremque esse amet? Soluta.</p>
-            <button class="btn-4">Подробнее</button>
+          <h1>01 Полный доступ</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            exercitationem quidem totam expedita laudantium libero amet earum
+            magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci
+            doloremque esse amet? Soluta.
+          </p>
+          <button class="btn-4">Подробнее</button>
         </div>
         <div class="prop">
-            <h1>02 Предложения</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem quidem totam expedita laudantium libero amet earum magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci doloremque esse amet? Soluta.</p>
-            <button class="btn-4">Подробнее</button>
+          <h1>02 Предложения</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            exercitationem quidem totam expedita laudantium libero amet earum
+            magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci
+            doloremque esse amet? Soluta.
+          </p>
+          <button class="btn-4">Подробнее</button>
         </div>
         <div class="prop">
-            <h1>03 Связь с редакцией</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem quidem totam expedita laudantium libero amet earum magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci doloremque esse amet? Soluta.</p>
-            <button class="btn-4">Подробнее</button>
+          <h1>03 Связь с редакцией</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            exercitationem quidem totam expedita laudantium libero amet earum
+            magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci
+            doloremque esse amet? Soluta.
+          </p>
+          <button class="btn-4">Подробнее</button>
         </div>
         <div class="prop">
-            <h1>04 Работа у нас</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem quidem totam expedita laudantium libero amet earum magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci doloremque esse amet? Soluta.</p>
-            <button class="btn-4">Подробнее</button>
+          <h1>04 Работа у нас</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            exercitationem quidem totam expedita laudantium libero amet earum
+            magnam illum ab voluptates enim. Totam, quam quibusdam! Adipisci
+            doloremque esse amet? Soluta.
+          </p>
+          <button class="btn-4">Подробнее</button>
         </div>
       </div>
 
-      <div class="gal-container">
+      <!-- <div id="canvas"></div> -->
+      <button id="drawBtn" onclick="drawBtnClick(this)">Рисовать</button>
 
+      <div class="gal-container">
         <div class="picA">
-          <img src="/images/Fheavy.png" alt="">
-          <div class="gal-label"><p>Falcon heavy</p></div>
+          <img src="/images/Fheavy.png" alt="" />
+          <div class="gal-label">
+            <p>Falcon heavy</p>
+            <div class="like-btn" onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
           <!-- <p class="gal-label">WOW</p> -->
         </div>
         <div class="picB">
-          <img src="/images/hubble.png" alt="">
-          <div class="gal-label"><p>Hubble<br>telescope</p></div>
+          <img src="/images/hubble.png" alt="" />
+          <div class="gal-label">
+            <p>Hubble<br />telescope</p>
+            <div class="like-btn" onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </div>
         <div class="picC">
-          <img src="/images/iss.png" alt="">
-          <div class="gal-label"><p>ISS</p></div>
+          <img src="/images/iss.png" alt="" />
+          <div class="gal-label">
+            <p>ISS</p>
+            <div class="like-btn" onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </div>
         <div class="picD">
-          <img src="/images/perseverance.png" alt="">
-          <div class="gal-label"><p>Perseverance</p></div>
+          <img src="/images/perseverance.png" alt="" />
+          <div class="gal-label">
+            <p>Perseverance</p>
+            <div class="like-btn"  onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </div>
         <div class="picE">
-          <img src="/images/jweb.png" alt="">
-          <div class="gal-label"><p>James Webb</p></div>
+          <img src="/images/jweb.png" alt="" />
+          <div class="gal-label">
+            <p>James Webb</p>
+            <div class="like-btn" onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </div>
         <div class="picF">
-          <img src="/images/starship.png" alt="">
-          <div class="gal-label"><p>Starship</p></div>
+          <img src="/images/starship.png" alt="" />
+          <div class="gal-label">
+            <p>Starship</p>
+            <div class="like-btn" onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </div>
         <div class="picG">
-          <img src="/images/ingen.jpg" alt="">
-          <div class="gal-label"><p>Ingenuity</p></div>
+          <img src="/images/ingen.jpg" alt="" />
+          <div class="gal-label">
+            <p>Ingenuity</p>
+            <div class="like-btn" onclick="likeBtn(this)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </main>
+
+    <script src="/scripts/login.js"></script>
   </body>
 </html>
