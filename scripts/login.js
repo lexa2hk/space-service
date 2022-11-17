@@ -164,6 +164,21 @@ function truncate(str, maxlength){
     }
 }
 
+function createcard(){
+    let card = document.createElement("div");
+    // card.style.width = "200px";
+    // card.style.height=("200px");
+    // card.style.backgroundColor=("grey");
+    // borderRadius = "10px";
+    // card.style.borderRadius=(borderRadius);
+    // card.style.margin= ("10px");
+    card.className = "card";
+    let text = prompt("Введите текст");
+    let length = prompt("Введите длину");
+    card.innerHTML = "<p>"+truncate(text, length)+"</p>";
+    document.getElementById("truncate-cards").append(card);
+}
+
 
 let a=Math.floor(Math.random()*10);
 let b=Math.floor(Math.random()*10);
@@ -251,21 +266,25 @@ function addToCart(name, price) {
     console.log(name + " " + price);
     let cart = document.getElementById("shopping-cart");
     let cartSearch = document.getElementById(name+"-cart");
+    console.log(cardData);
     if (cartSearch == null) {
         cartItem = document.createElement("div");
         cartItem.id = name + "-cart";
         cartItem.className = "cart-item";
         var tempAcc = new Accumulator(1);
         cardData.set(name, tempAcc);
+        console.log(name);
+        console.log(cardData);
 
-        cartItem.innerHTML = name + " " + price + " руб. / " + cardData[name].getResult();
+        cartItem.innerHTML = name + " " + price + " руб. / " + tempAcc.getResult();
         
         console.log(cart.innerHTML);
         cart.appendChild(cartItem);
     } else {
         let el = document.getElementById(name + "-cart");
         cardData[name].read();
-        el.innerHTML = name + " " + price + " руб. / " + cardData[name].getResult();
+        console.log(cardData[name]);
+        el.innerHTML = name + " " + price + " руб. / " + cardData[String(name)].getResult();
     }
 }
 
