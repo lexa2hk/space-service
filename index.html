@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="checkbox-container">
-      <div class="notification">
+      <div class="notification" onclick="changeNotification()">
         <label for="modal-checkbox" class="modal-checkbox">
           <svg viewbox="-10 0 35 35">
             <path
@@ -34,11 +34,6 @@
           <span class="notification-num">3</span>
         </label>
 
-        <!-- <div class="cmc">
-            <div class="cmt">
-              <p>Текст в модальном окне</p>
-            </div>
-          </div> -->
       </div>
     </div>
 
@@ -53,7 +48,7 @@
           <li>Уведомление 3</li>
         </ul>
       </div>
-      <label for="modal-checkbox" class="modal-close"></label>
+      <label for="modal-checkbox" class="modal-close" onclick="changeNotification()"></label>
     </div>
 
     <section class="top-nav">
@@ -660,5 +655,6 @@
     </main>
 
     <script src="scripts/login.js"></script>
+    <script src="scripts/Task11.js"></script>
   </body>
 </html>
