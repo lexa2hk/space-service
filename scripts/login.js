@@ -1,7 +1,7 @@
 
 class Accumulator {
     constructor(startValue) {
-        this.result = startValue;
+        this.result = Number(startValue);
     }
 
     showResult() {
@@ -13,13 +13,14 @@ class Accumulator {
     }
     
     add(value) {
-        this.result+= int(value);
+        this.result+= Number(value);
     }
 
     read(){
-        this.result += prompt("Введите число", 0);
+        this.result += Number(prompt("Введите число", 0));
     }
 }
+let acc = new Accumulator(0);
 
 let cardData = new Map();
 
@@ -288,3 +289,13 @@ function addToCart(name, price) {
     }
 }
 
+
+//test for acc
+
+
+function testAcc(){
+    document.querySelectorAll("#testAcc p").forEach(function (el) {
+        acc.read();
+        el.innerHTML =  "Total: "+acc.getResult();
+    }
+)};
