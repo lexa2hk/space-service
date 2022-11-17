@@ -95,6 +95,13 @@
             подсказать, как погодные условия на Красной планете изменились с
             земных на известные нам сейчас.
           </p>
+
+          <div id="shopping-cart">
+            <h2>Ваша корзина:</h2>
+            <ul id="cart-list">
+
+            </ul>
+          </div>
         </div>
 
         <div class="grid-1">
@@ -187,6 +194,30 @@
                     width="400"
                 /></a>
               </p>
+            </div>
+
+            <div id="donations">
+              <h3>Поддержите нас, купив мерч</h3>
+              <div id="merch-items">
+                <div class="merch-item">
+                  
+                  <p>Кружка</p>
+                  <p>Цена: 500 рублей</p>
+                  <button class="btn-4" onclick="addToCart('Кружка', 500)">
+                    В корзину
+                  </button>
+                </div>
+
+                <div class="merch-item">
+                  
+                  <p>Ложка</p>
+                  <p>Цена: 100 рублей</p>
+                  <button class="btn-4" onclick="addToCart('Ложка', 500)">
+                    В корзину
+                  </button>
+                </div>
+              </div>
+              
             </div>
           </section>
 
@@ -618,5 +649,7 @@
 
       <!-- </article> -->
     </main>
+
+    <script src="scripts/login.js"></script>
   </body>
 </html>
