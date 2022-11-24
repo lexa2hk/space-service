@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/scripts/Task11.js"></script>
+    <script src="/scripts/Task12.js"></script>
 
     <title>Главная</title>
   </head>
@@ -66,18 +67,16 @@
               <input type="password" id="password" />
             </div>
             <div class="c-container">
-              <p id="capcha">
-
-              </p>
+              <p id="capcha"></p>
               <input type="text" id="capcha-input" />
             </div>
-            
+
             <div class="input-group">
-              <button class="custom-btn btn-1" id="check-capcha" disabled>Войти</button>
+              <button class="custom-btn btn-1" id="check-capcha" disabled>
+                Войти
+              </button>
             </div>
-           
           </form>
-          
 
           <div class="login-card-footer">
             <p>
@@ -92,7 +91,6 @@
         <div class="box--4"></div>
         <div class="box--5"></div>
       </div>
-
 
       <div class="props-steer">
         <button class="btn-4" onclick="changeOrder()">Поменять местами</button>
@@ -143,8 +141,35 @@
         </div>
       </div>
 
+      <div class="Task12">
+        <h2>Task 12</h2>
+        <a href="http://google.com">Google</a>
+        <br />
+        <a href="">MainPage</a>
+
+        <div class="dynamicList">
+          <h2>Динамический список</h2>
+          <button class="btn-4" onclick="addToList()">Добавить в список</button>
+
+          <ul></ul>
+        </div>
+
+        <div class="notif-container">
+          <button class="btn-4" onclick="showNotification('очень крутое уведомление')">
+            Добавить "Уведомление"
+          </button>
+        </div>
+
+      <div class="subtask4">
+        <h2>center element using JS</h2>
+        <div class="center-container" style="height: 1000px;width:50%;border: 1px solid black;">
+          <img src="images/jweb.png" alt="" height="100px" width="100px">
+        </div>
+      </div>
+      </div>
+
       <!-- <div id="canvas"></div> -->
-      <button id="drawBtn" onclick="drawBtnClick(this)">Рисовать</button>
+      <!-- <button id="drawBtn" onclick="drawBtnClick(this)">Рисовать</button> -->
 
       <div class="gal-container">
         <div class="picA">
@@ -179,7 +204,7 @@
           <img src="/images/perseverance.png" alt="" />
           <div class="gal-label">
             <p>Perseverance</p>
-            <div class="like-btn"  onclick="likeBtn(this)">
+            <div class="like-btn" onclick="likeBtn(this)">
               <i class="fa-solid fa-heart"></i>
             </div>
           </div>
@@ -215,6 +240,5 @@
     </main>
 
     <script src="/scripts/login.js"></script>
-
   </body>
 </html>
