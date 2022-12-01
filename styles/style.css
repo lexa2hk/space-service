@@ -1100,6 +1100,7 @@ textarea::placeholder {
 }
 
 #modal-checkbox:checked + .cmc .cmt ul li {
+  position: relative;
   margin-bottom: 10px;
   margin-top: 10px;
   font-family: "Roboto", sans-serif;
@@ -1107,6 +1108,16 @@ textarea::placeholder {
   font-weight: 400;
   color: #000;
   text-align: center;
+}
+
+#modal-checkbox:checked + .cmc .cmt ul li span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: rgb(14, 0, 87);
+  z-index: 100000;
+  transition: 0.5s;
 }
 
 .bar-list {

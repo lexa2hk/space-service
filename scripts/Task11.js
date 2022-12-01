@@ -69,7 +69,13 @@ function addNotification(){
 
     let notif = document.createElement('li');
     notif.innerHTML = "Новое уведомление";
+
+    let closeBtn = document.createElement('span');
+    notif.appendChild(closeBtn);
+    closeBtn.innerHTML = "X";
     notifList.append(notif);
+
+
 
     let notifNum = document.querySelector('.modal-checkbox .notification-num');
     notifNum.innerHTML = Number(notifNum.innerHTML) + 1;
@@ -84,3 +90,15 @@ let addSlowly = setInterval(addNotification, timeoutNotification);
 
 
 setInterval(isOpened ? addNotification : addSlowly , timeoutNotification);
+
+
+const ulList = document.querySelector('.cmc .cmt ul');
+
+
+ulList.addEventListener('click', (event) => {
+    if(event.target.tagName == "SPAN"){
+        event.target.parentNode.remove();
+        let notifNum = document.querySelector('.modal-checkbox .notification-num');
+        notifNum.innerHTML = Number(notifNum.innerHTML) - 1;
+    }
+});
