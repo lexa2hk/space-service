@@ -22,10 +22,11 @@
     <script src="/scripts/Task11.js"></script>
     <script src="/scripts/Task12.js"></script>
 
+
     <title>Главная</title>
   </head>
   <body>
-    <section class="top-nav">
+    <section class="top-nav" id="goTop">
       <div>
         <img src="/images/logo.png" alt="LOGO" width="80px" height="80px" />
       </div>
@@ -41,6 +42,11 @@
     </section>
 
     <main>
+      <div class="goUp">
+        <a href="#goTop" onclick="animateRocket()">
+          <img src="images/goUpLight.png" alt="" />
+        </a>
+      </div>
       <!-- <div id="ask-container">
         <div class="ask">
           <form action="">
@@ -142,10 +148,13 @@
       </div>
 
       <div class="Task12">
-        <h2>Task 12</h2>
-        <a href="http://google.com">Google</a>
-        <br />
-        <a href="">MainPage</a>
+        <div id="contents">
+          <h2>Task 13.1</h2>
+          <a href="http://google.com">Google</a>
+          <br />
+          <a href="">MainPage</a>
+        </div>
+        
 
         <div class="dynamicList">
           <h2>Динамический список</h2>
@@ -237,8 +246,56 @@
           </div>
         </div>
       </div>
+
+      <div class="simpleList">
+        <h2>Простой список</h2>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+
+      <div class="simpleSlider">
+        <h2>Простой слайдер</h2>
+        <div id="slider">
+          <div id="pimp"></div>
+        </div>
+      </div>
+
+      <div class="smartCart">
+        <h2>Умная корзина</h2>
+        <div id="cart">
+          <h2>Поместите сюда</h2>
+          <p>Стоимость:</p>
+          <p id="cost">0</p>
+        </div>
+
+        <ul id="items">
+          <li>Товар 1: 100</li>
+          <li>Товар 2: 200</li>
+        </ul>
+
+      </div>
+
+      <div class="smartGallery">
+        <div id="mainSmartGal">
+          <img class="mainImg" src="/images/Fheavy.png" alt="" />
+        </div>
+        <div class="smartGal">
+          <img src="/images/hubble.png" alt="" />
+          <img src="/images/iss.png" alt="" />
+          <img src="/images/perseverance.png" alt="" />
+          <img src="/images/jweb.png" alt="" />
+          <img src="/images/starship.png" alt="" />
+          <img src="/images/ingen.jpg" alt="" />
+      </div>
+
     </main>
 
     <script src="/scripts/login.js"></script>
+    <script src="/scripts/Task13.js"></script>
   </body>
 </html>

@@ -216,4 +216,93 @@
 .social-btn:not(:hover)::before {
   top: -100%;
   transition: all 0.3s ease-in-out;
+}
+
+#slider {
+  margin: 30px;
+  position: relative;
+  width: 200px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#pimp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 10px;
+  background-color: #e66465;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#cart {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px dotted #000000;
+}
+
+#items {
+  list-style: none;
+}
+
+#items li {
+  width: 150px;
+  margin: 10px;
+  background: #9198e5;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.smartGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mainImg {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px !important;
+  transition: 0.3s !important;
+  cursor: pointer;
+}
+
+.smartGallery img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgba(85, 118, 211, 0.384);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.goUp {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+.goUp img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 580px) {
+  .goUp {
+    right: 5px;
+  }
 }/*# sourceMappingURL=main.css.map */
