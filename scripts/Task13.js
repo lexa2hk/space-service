@@ -27,7 +27,7 @@ for(let i = 0; i < listItems.length; i++){
 list.addEventListener("click", (event) => {
     if(event.target.tagName == "LI"){
         let li = event.target;
-        if(event.ctrlKey){
+        if(event.ctrlKey || event.metaKey){
             li.classList.toggle("selected");
         }
         else if(event.shiftKey){
